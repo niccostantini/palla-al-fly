@@ -22,11 +22,11 @@ export const CreateMatchPage: React.FC = () => {
     date: '',
     time: '',
     venue_id: '',
-    setter_req: 1,
-    oh_req: 2,
+    setter_req: 2,
+    oh_req: 4,
     oph_req: 2,
-    mb_req: 1,
-    l_req: 1,
+    mb_req: 2,
+    l_req: 2,
     notes: '',
   });
 
