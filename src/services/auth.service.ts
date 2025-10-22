@@ -1,11 +1,13 @@
 import { supabase } from '../lib/supabase';
 
+const redirectLink: string = "https://palla-al-fly.vercel.app"
+
 export const authService = {
   async signInWithGoogle() {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/`,
+        redirectTo: `${redirectLink}/`,
       },
     });
     return { data, error };
@@ -24,7 +26,7 @@ export const authService = {
       email,
       password,
       options: {
-        emailRedirectTo: `${window.location.origin}/`,
+        emailRedirectTo: `${redirectLink}/`,
       },
     });
     return { data, error };
