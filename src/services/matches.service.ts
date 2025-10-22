@@ -82,4 +82,21 @@ export const matchesService = {
   async updateMatchStatus(id: string, status: MatchStatus) {
     return this.updateMatch(id, { status });
   },
+
+  async getUserMatchQuota(userEmail: string) {
+    try {
+      const { data, error } = await supabase
+        .rpc('count_user_matches_last_7_days', { user_email: userEmail });
+      
+      if (error) {
+        console.error('[matchesService] getUserMatchQuota error:', error);
+        return { count: 0, error };
+      }
+      
+      return { count: data as number, error: null };
+    } catch (err) {
+      console.error('[matchesService] getUserMatchQuota exception:', err);
+      return { count: 0, error: err };
+    }
+  },
 };

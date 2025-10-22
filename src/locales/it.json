@@ -55,7 +55,11 @@
     "creating": "Creazione...",
     "createMatch": "Crea Partita",
     "fillRequired": "Compila tutti i campi obbligatori",
-    "createFailed": "Creazione partita fallita"
+    "createFailed": "Creazione partita fallita",
+    "quota": "Partite create negli ultimi 7 giorni: {{count}}/3",
+    "quotaReached": "Hai raggiunto il limite di 3 partite negli ultimi 7 giorni. Riprova quando la finestra si aggiorna.",
+    "quotaExempt": "Admin - nessun limite di quota",
+    "loadingQuota": "Caricamento quota..."
   },
   "roster": {
     "title": "Rosa",

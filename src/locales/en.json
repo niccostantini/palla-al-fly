@@ -55,7 +55,11 @@
     "creating": "Creating...",
     "createMatch": "Create Match",
     "fillRequired": "Please fill in all required fields",
-    "createFailed": "Failed to create match"
+    "createFailed": "Failed to create match",
+    "quota": "Matches created in last 7 days: {{count}}/3",
+    "quotaReached": "You have reached the limit of 3 matches in the last 7 days. Please try again when the window updates.",
+    "quotaExempt": "Admin - no quota limit",
+    "loadingQuota": "Loading quota..."
   },
   "roster": {
     "title": "Roster",
