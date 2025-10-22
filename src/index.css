@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #FFFFFF;
+  --fg: #0F172A;
+  --muted: #6B7280;
+  --border: #E5E7EB;
+  --card: #FFFFFF;
+  --primary-600: #5B3DF5;
+  --primary-700: #4D32D6;
+  --aqua: #00D4FF;
+  --rose: #FF4D96;
+  --success-600: #16A34A;
+  --warning-600: #F59E0B;
+  --danger-600: #EF4444;
+  --info-600: #0EA5E9;
+}
+
+.dark {
+  --bg: #0B1220;
+  --fg: #E5E7EB;
+  --muted: #9CA3AF;
+  --border: #1F2937;
+  --card: #111827;
+}
+
+/* Body managed by Tailwind classes */
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}

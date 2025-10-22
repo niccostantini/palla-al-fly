@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Palla al Fly",
+    "logout": "Logout",
+    "login": "Login",
+    "adminPanel": "Admin Panel",
+    "venues": "Venues",
+    "createMatch": "Create Match"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "passwordMin": "Min. 8 characters",
+    "emailPlaceholder": "your@email.com",
+    "processing": "Processing...",
+    "orContinueWith": "Or continue with",
+    "signInWithGoogle": "Sign in with Google",
+    "fillAllFields": "Please fill in all fields",
+    "passwordMinLength": "Password must be at least 8 characters",
+    "authFailed": "Authentication failed",
+    "googleSignInFailed": "Google sign-in failed"
+  },
+  "matches": {
+    "title": "Matches",
+    "noMatches": "No matches available",
+    "viewDetails": "View Details",
+    "date": "Date",
+    "time": "Time",
+    "venue": "Venue",
+    "notes": "Notes",
+    "deleteMatch": "Delete Match",
+    "confirmDelete": "Confirm Delete",
+    "deleteConfirmMessage": "Are you sure you want to delete this match? This action cannot be undone.",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "loginToSeeDetails": "Please login to see venue details and player roster",
+    "loadingMatch": "Loading match...",
+    "matchNotFound": "Match not found"
+  },
+  "createMatch": {
+    "title": "Create New Match",
+    "matchTitle": "Match Title",
+    "matchTitlePlaceholder": "e.g. Sunday Volleyball Session",
+    "date": "Date",
+    "time": "Time",
+    "venue": "Venue",
+    "selectVenue": "Select a venue...",
+    "noVenues": "No venues available. Please create a venue first.",
+    "roleCapacities": "Role Capacities",
+    "notes": "Notes (optional)",
+    "notesPlaceholder": "Additional information about the match...",
+    "cancel": "Cancel",
+    "creating": "Creating...",
+    "createMatch": "Create Match",
+    "fillRequired": "Please fill in all required fields",
+    "createFailed": "Failed to create match"
+  },
+  "roster": {
+    "title": "Roster",
+    "noPlayers": "No players yet",
+    "remove": "Remove",
+    "overbooked": "Overbooked"
+  },
+  "playerSignup": {
+    "title": "Sign Up Player",
+    "playerName": "Player Name",
+    "playerNamePlaceholder": "Full name",
+    "role": "Role",
+    "phoneNumber": "Phone Number (optional)",
+    "phoneNumberPlaceholder": "+39 123 456 7890",
+    "signingUp": "Signing up...",
+    "signUp": "Sign Up",
+    "mustBeLoggedIn": "You must be logged in to sign up for matches.",
+    "nameRequired": "Name is required",
+    "signupFailed": "Failed to sign up"
+  },
+  "venues": {
+    "title": "Venues",
+    "addVenue": "Add Venue",
+    "noVenues": "No venues yet. Add your first venue!",
+    "edit": "Edit",
+    "delete": "Delete",
+    "editVenue": "Edit Venue",
+    "createVenue": "Add Venue",
+    "venueName": "Venue Name",
+    "venueNamePlaceholder": "e.g. Palestra Comunale",
+    "address": "Address",
+    "addressPlaceholder": "e.g. Via Roma 123, Milano",
+    "cancel": "Cancel",
+    "update": "Update",
+    "create": "Create",
+    "nameAddressRequired": "Name and address are required",
+    "loadingVenues": "Loading venues..."
+  },
+  "roles": {
+    "setter": "Setter (S)",
+    "oh": "Outside Hitter (OH)",
+    "oph": "Opposite Hitter (OpH)",
+    "mb": "Middle Blocker (MB)",
+    "l": "Libero (L)"
+  },
+  "status": {
+    "open": "OPEN",
+    "full": "FULL",
+    "overbooking": "OVERBOOKING",
+    "cancelled": "CANCELLED"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "required": "required"
+  }
+}

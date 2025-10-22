@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Palla al Fly",
+    "logout": "Esci",
+    "login": "Accedi",
+    "adminPanel": "Pannello Admin",
+    "venues": "Campi",
+    "createMatch": "Crea Partita"
+  },
+  "auth": {
+    "login": "Accedi",
+    "register": "Registrati",
+    "email": "Email",
+    "password": "Password",
+    "passwordMin": "Min. 8 caratteri",
+    "emailPlaceholder": "tua@email.com",
+    "processing": "Elaborazione...",
+    "orContinueWith": "Oppure continua con",
+    "signInWithGoogle": "Accedi con Google",
+    "fillAllFields": "Compila tutti i campi",
+    "passwordMinLength": "La password deve essere di almeno 8 caratteri",
+    "authFailed": "Autenticazione fallita",
+    "googleSignInFailed": "Accesso con Google fallito"
+  },
+  "matches": {
+    "title": "Partite",
+    "noMatches": "Nessuna partita disponibile",
+    "viewDetails": "Vedi Dettagli",
+    "date": "Data",
+    "time": "Ora",
+    "venue": "Campo",
+    "notes": "Note",
+    "deleteMatch": "Elimina Partita",
+    "confirmDelete": "Conferma Eliminazione",
+    "deleteConfirmMessage": "Sei sicuro di voler eliminare questa partita? Questa azione non può essere annullata.",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "loginToSeeDetails": "Effettua il login per vedere i dettagli del campo e la lista giocatori",
+    "loadingMatch": "Caricamento partita...",
+    "matchNotFound": "Partita non trovata"
+  },
+  "createMatch": {
+    "title": "Crea Nuova Partita",
+    "matchTitle": "Titolo Partita",
+    "matchTitlePlaceholder": "es. Partita Domenicale",
+    "date": "Data",
+    "time": "Ora",
+    "venue": "Campo",
+    "selectVenue": "Seleziona un campo...",
+    "noVenues": "Nessun campo disponibile. Crea prima un campo.",
+    "roleCapacities": "Capacità Ruoli",
+    "notes": "Note (opzionali)",
+    "notesPlaceholder": "Informazioni aggiuntive sulla partita...",
+    "cancel": "Annulla",
+    "creating": "Creazione...",
+    "createMatch": "Crea Partita",
+    "fillRequired": "Compila tutti i campi obbligatori",
+    "createFailed": "Creazione partita fallita"
+  },
+  "roster": {
+    "title": "Rosa",
+    "noPlayers": "Nessun giocatore ancora",
+    "remove": "Rimuovi",
+    "overbooked": "Overbooking"
+  },
+  "playerSignup": {
+    "title": "Iscrivi Giocatore",
+    "playerName": "Nome Giocatore",
+    "playerNamePlaceholder": "Nome completo",
+    "role": "Ruolo",
+    "phoneNumber": "Numero di Telefono (opzionale)",
+    "phoneNumberPlaceholder": "+39 123 456 7890",
+    "signingUp": "Iscrizione...",
+    "signUp": "Iscriviti",
+    "mustBeLoggedIn": "Devi essere autenticato per iscriverti alle partite.",
+    "nameRequired": "Il nome è obbligatorio",
+    "signupFailed": "Iscrizione fallita"
+  },
+  "venues": {
+    "title": "Campi",
+    "addVenue": "Aggiungi Campo",
+    "noVenues": "Nessun campo ancora. Aggiungi il tuo primo campo!",
+    "edit": "Modifica",
+    "delete": "Elimina",
+    "editVenue": "Modifica Campo",
+    "createVenue": "Crea Campo",
+    "venueName": "Nome Campo",
+    "venueNamePlaceholder": "es. Palestra Comunale",
+    "address": "Indirizzo",
+    "addressPlaceholder": "es. Via Roma 123, Milano",
+    "cancel": "Annulla",
+    "update": "Aggiorna",
+    "create": "Crea",
+    "nameAddressRequired": "Nome e indirizzo sono obbligatori",
+    "loadingVenues": "Caricamento campi..."
+  },
+  "roles": {
+    "setter": "Palleggiatore (P)",
+    "oh": "Schiacciatore (S)",
+    "oph": "Opposto (O)",
+    "mb": "Centrale (C)",
+    "l": "Libero (L)"
+  },
+  "status": {
+    "open": "APERTO",
+    "full": "COMPLETO",
+    "overbooking": "OVERBOOKING",
+    "cancelled": "ANNULLATO"
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo",
+    "required": "obbligatorio"
+  }
+}
