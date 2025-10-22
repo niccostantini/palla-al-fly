@@ -1,6 +1,6 @@
 import { supabase } from '../lib/supabase';
 
-const redirectLink: string = "https://palla-al-fly.vercel.app"
+const redirectLink = import.meta.env.VITE_REDIRECT_URL || window.location.origin
 
 export const authService = {
   async signInWithGoogle() {
