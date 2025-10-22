@@ -56,15 +56,21 @@ export const Header: React.FC = () => {
 
             {user ? (
               <>
+                <Button
+                  variant="primary"
+                  onClick={() => navigate('/create-match')}
+                  className="text-xs sm:text-sm px-3 py-1"
+                >
+                  {t('header.createMatch')}
+                </Button>
                 {isAdmin && (
-                  <>
-                    <Link to="/venues" className="hover:text-accent-aqua transition-colors text-xs sm:text-sm font-medium">
-                      {t('header.venues')}
-                    </Link>
-                    <Link to="/create-match" className="hover:text-accent-aqua transition-colors text-xs sm:text-sm font-medium">
-                      {t('header.createMatch')}
-                    </Link>
-                  </>
+                  <Button
+                    variant="primary"
+                    onClick={() => navigate('/venues')}
+                    className="text-xs sm:text-sm px-3 py-1"
+                  >
+                    {t('header.venues')}
+                  </Button>
                 )}
                 <span className="text-xs sm:text-sm text-blue-100 dark:text-gray-300 truncate max-w-[40vw] sm:max-w-none">
                   {user.email}

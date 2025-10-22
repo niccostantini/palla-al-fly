@@ -31,12 +31,12 @@ export const CreateMatchPage: React.FC = () => {
   });
 
   useEffect(() => {
-    if (!user || !isAdmin) {
+    if (!user) {
       navigate('/');
       return;
     }
     fetchVenues();
-  }, [user, isAdmin, navigate]);
+  }, [user, navigate]);
 
   const fetchVenues = async () => {
     try {
