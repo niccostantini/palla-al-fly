@@ -92,8 +92,19 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const signOut = async () => {
-    const { error } = await authService.signOut();
-    if (error) throw error;
+    try {
+      const { error } = await authService.signOut();
+      // Ignore "Auth session missing" errors - user is already signed out
+      if (error && !error.message?.includes('session missing')) {
+        throw error;
+      }
+    } catch (err) {
+      // If session is already gone, just clear the local state
+      console.log('[AuthContext] Sign out error (likely already signed out):', err);
+      setSession(null);
+      setUser(null);
+      setIsAdmin(false);
+    }
   };
 
   return (
