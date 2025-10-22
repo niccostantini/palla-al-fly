@@ -23,6 +23,7 @@ export interface Match {
   mb_req: number;
   l_req: number;
   notes?: string;
+  created_by: string;
   created_at: string;
   updated_at: string;
 }

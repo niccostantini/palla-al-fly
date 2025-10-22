@@ -87,7 +87,10 @@ export const MatchDetail: React.FC = () => {
   };
 
   const canRemovePlayer = (player: Player) => {
-    return isAdmin || player.created_by === user?.email;
+    if (isAdmin) return true;
+    if (player.created_by === user?.email) return true;
+    if (match?.created_by === user?.email) return true;
+    return false;
   };
 
   const getPlayersByRole = (role: PlayerRole) => {

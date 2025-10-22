@@ -38,6 +38,7 @@ export const matchesService = {
     date: string;
     time: string;
     venue_id: string;
+    created_by: string;
     status?: MatchStatus;
     setter_req?: number;
     oh_req?: number;

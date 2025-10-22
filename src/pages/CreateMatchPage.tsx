@@ -57,12 +57,18 @@ export const CreateMatchPage: React.FC = () => {
       return;
     }
 
+    if (!user?.email) {
+      setError('User email not found');
+      return;
+    }
+
     try {
       setLoading(true);
       const { data, error } = await matchesService.createMatch({
         ...formData,
         title: formData.title.trim(),
         notes: formData.notes.trim() || undefined,
+        created_by: user.email,
       });
       
       if (error) throw error;
