@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../hooks/useAuth';
 import { playersService } from '../services/players.service';
 import type { PlayerRole } from '../types/database';
 import { Input } from './ui/Input';
 import { Button } from './ui/Button';
+import { CircularLoader } from './ui/CircularLoader';
 
 interface PlayerSignupFormProps {
   matchId: string;
@@ -116,7 +117,14 @@ export const PlayerSignupForm: React.FC<PlayerSignupFormProps> = ({
       />
 
       <Button type="submit" fullWidth disabled={loading}>
-        {loading ? t('playerSignup.signingUp') : t('playerSignup.signUp')}
+        {loading ? (
+          <span className="flex items-center justify-center gap-2">
+            <CircularLoader size={20} strokeWidth={3} />
+            {t('playerSignup.signingUp')}
+          </span>
+        ) : (
+          t('playerSignup.signUp')
+        )}
       </Button>
     </form>
   );

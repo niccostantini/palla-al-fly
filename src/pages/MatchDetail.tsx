@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../hooks/useAuth';
 import { matchesService } from '../services/matches.service';
 import { playersService } from '../services/players.service';
 import type { Match, Player, PlayerRole } from '../types/database';
@@ -9,6 +9,7 @@ import { Badge } from '../components/ui/Badge';
 import { RoleBadge } from '../components/ui/RoleBadge';
 import { Button } from '../components/ui/Button';
 import { Modal } from '../components/ui/Modal';
+import { CircularLoader } from '../components/ui/CircularLoader';
 import { PlayerSignupForm } from '../components/PlayerSignupForm';
 import {
   getRoleCapacities,
@@ -112,7 +113,8 @@ export const MatchDetail: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-[50vh]">
+      <div className="flex flex-col justify-center items-center min-h-[50vh] gap-4">
+        <CircularLoader size={80} />
         <div className="text-gray-600 dark:text-gray-400">{t('matches.loadingMatch')}</div>
       </div>
     );

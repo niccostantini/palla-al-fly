@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../hooks/useAuth';
 import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
+import { CircularLoader } from '../components/ui/CircularLoader';
 
 export const AuthPage: React.FC = () => {
   console.log('[AuthPage] Component rendering');
@@ -132,7 +133,14 @@ export const AuthPage: React.FC = () => {
             fullWidth
             disabled={loading}
           >
-            {loading ? t('auth.processing') : isLogin ? t('auth.login') : t('auth.register')}
+            {loading ? (
+              <span className="flex items-center justify-center gap-2">
+                <CircularLoader size={20} strokeWidth={3} />
+                {t('auth.processing')}
+              </span>
+            ) : (
+              isLogin ? t('auth.login') : t('auth.register')
+            )}
           </Button>
         </form>
 

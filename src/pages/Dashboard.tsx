@@ -2,9 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useMatches } from '../hooks/useMatches';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../hooks/useAuth';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
+import { CircularLoader } from '../components/ui/CircularLoader';
 import type { Match } from '../types/database';
 
 export const Dashboard: React.FC = () => {
@@ -40,7 +41,8 @@ export const Dashboard: React.FC = () => {
   if (loading) {
     console.log('[Dashboard] Showing loading state');
     return (
-      <div className="flex justify-center items-center min-h-[50vh]">
+      <div className="flex flex-col justify-center items-center min-h-[50vh] gap-4">
+        <CircularLoader size={80} />
         <div className="text-gray-600 dark:text-gray-400">{t('common.loading')}</div>
       </div>
     );

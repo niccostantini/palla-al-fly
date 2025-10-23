@@ -1,20 +1,9 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import type { Session, User } from '@supabase/supabase-js';
 import { authService } from '../services/auth.service';
 import { adminsService } from '../services/admins.service';
-
-interface AuthContextType {
-  user: User | null;
-  session: Session | null;
-  isAdmin: boolean;
-  loading: boolean;
-  signInWithGoogle: () => Promise<void>;
-  signInWithEmail: (email: string, password: string) => Promise<void>;
-  signUpWithEmail: (email: string, password: string) => Promise<void>;
-  signOut: () => Promise<void>;
-}
-
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+import { CircularLoader } from '../components/ui/CircularLoader';
+import { AuthContext } from './auth-context';
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   console.log('[AuthProvider] Initializing');
@@ -107,6 +96,15 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
+  if (loading) {
+    return (
+      <div className="flex flex-col justify-center items-center min-h-screen gap-4">
+        <CircularLoader size={80} />
+        <div className="text-gray-600 dark:text-gray-400">Caricamento...</div>
+      </div>
+    );
+  }
+
   return (
     <AuthContext.Provider
       value={{
@@ -125,10 +123,3 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   );
 };
 
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
-};

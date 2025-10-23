@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../hooks/useAuth';
 import { venuesService } from '../services/venues.service';
 import type { Venue } from '../types/database';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
 import { Modal } from '../components/ui/Modal';
+import { CircularLoader } from '../components/ui/CircularLoader';
 
 export const VenuesPage: React.FC = () => {
   const { isAdmin } = useAuth();
@@ -91,8 +92,9 @@ export const VenuesPage: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-[50vh]">
-        <div className="text-gray-600">Loading venues...</div>
+      <div className="flex flex-col justify-center items-center min-h-[50vh] gap-4">
+        <CircularLoader size={80} />
+        <div className="text-gray-600 dark:text-gray-400">{t('venues.loadingVenues')}</div>
       </div>
     );
   }

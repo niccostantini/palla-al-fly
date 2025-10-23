@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../hooks/useAuth';
 import { matchesService } from '../services/matches.service';
 import { venuesService } from '../services/venues.service';
 import type { Venue } from '../types/database';
 import { Input } from '../components/ui/Input';
 import { Button } from '../components/ui/Button';
+import { CircularLoader } from '../components/ui/CircularLoader';
 
 export const CreateMatchPage: React.FC = () => {
   const { user, isAdmin } = useAuth();
@@ -300,7 +301,14 @@ export const CreateMatchPage: React.FC = () => {
               disabled={isSubmitDisabled}
               className="flex-1"
             >
-              {loading ? t('createMatch.creating') : t('createMatch.createMatch')}
+              {loading ? (
+                <span className="flex items-center justify-center gap-2">
+                  <CircularLoader size={20} strokeWidth={3} />
+                  {t('createMatch.creating')}
+                </span>
+              ) : (
+                t('createMatch.createMatch')
+              )}
             </Button>
           </div>
         </form>
